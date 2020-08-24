@@ -1,0 +1,46 @@
+<style type="text/css">
+  .scrollbar
+  {
+      height: 100%;
+      background: #fff;
+      overflow-y: auto;
+  }
+
+  .scrollbar::-webkit-scrollbar-track
+  {
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+      background-color: #fff;
+  }
+
+  .scrollbar::-webkit-scrollbar
+  {
+      width: 3px;
+      background-color: #222222;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb
+  {
+      background-color: #000000;
+  }
+
+  [hidden], template{
+      display: none !important;
+  }
+
+</style>
+<nav class="navbar-default navbar-static-side" role="navigation" id="navbar">
+    <div class="sidebar-collapse scrollbar">          
+        <ul class="nav metismenu" id="side-menu">
+            <li class="nav-header profile" style="background-color: #222222 !important;transition: all 0.4s;" >
+                <div class="dropdown profile-element profile-image" style="text-align: center;transition: all 0.4s;">
+                    <img src="{{helper.base_url}}logo.png"/>
+                </div>
+            </li>
+            <li routerLink="/admin/dashboard" routerLinkActive="active"><a >Dashboard</a></li>
+            <li routerLink="/admin/quizs" routerLinkActive="active"><a >Quizs</a></li>
+            <li>
+                <a (click)="logout()">Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>

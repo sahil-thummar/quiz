@@ -1,0 +1,85 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <form class="form-horizontal" #quizForm="ngForm" id="form">
+                <div class="panel panel-default">
+                    <div class="panel-body form-group-separated">
+                        <div class="form-group">
+                            <label class="col-md-3 col-xs-5 control-label">Title</label>
+                            <div class="col-md-9 col-xs-7">
+                                <input id="Name" name="Name" #name="ngModel" [(ngModel)]="quiz.Name" required class="form-control" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 col-xs-5 control-label">Unique Id</label>
+                            <div class="col-md-9 col-xs-7">
+                                <input id="Unique_Id" name="Unique_Id" #Unique_Id="ngModel" [(ngModel)]="quiz.Unique_Id" required class="form-control" />
+                            </div>
+                        </div>
+                        <form #quizs="ngForm" enctype='multipart/form-data' >
+                            <div class="ibox float-e-margins">
+                                <div class="ibox-title">
+                                    <h5 style="font-weight: bold;"> Questions </h5>
+                                    <span *ngIf="add_quizs==false" class="fa fa-pencil pull-right" (click)="add_quizs=true"></span>
+                                    <span *ngIf="add_quizs==true" class="fa fa-check pull-right" (click)="updatequizs()" ></span>
+                                </div>
+                                <div class="ibox-content no-padding">
+                                    <div class="">
+                                        <form #quizsForm="ngForm" enctype='multipart/form-data'>
+                                            <div>
+                                                <ul class="list-group" *ngFor="let question of questions;let index=index;">
+                                                    <li class="list-group-item spec_list">
+                                                        <span  (click)="deletequestion(index, true)" class="fa fa-times pull-right"></span>
+                                                        <div>
+                                                            <input type="text" class="" [(ngModel)]="questions[index]" name="{{index}}">
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <ul class="list-group" *ngFor="let i of quiz.question; let quizs_index=index;">
+                                                <li class="list-group-item spec_list">
+                                                    <span (click)="deletequizs(quizs_index, false)" class="fa fa-times pull-right"></span>
+                                                    <div *ngIf="i!=='' && quiz.question.length>0 && quiz.question != undefined" >
+                                                        {{i}}
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </form>
+                                    </div>
+                                    <div class="add_spec_div">
+                                        <button (click)="append_quizs()" *ngIf="add_quizs==true" class="btn add_btn">Add quizs<span class="fa fa-plus" style="margin-left: 8px;"></span></button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="form-group">
+                            <label class="col-md-3 col-xs-5 control-label">Image</label>
+                            <div class="col-lg-12 profile-images center">
+                                <span class="btn-file add_img_bg_vehicle no-padding">
+                                    <img src="{{ quiz.Image}}" alt="">
+                                    <input type="file" accept="image/*" (change)="update_Image($event);" name="Image">
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 col-xs-5 control-label">Video</label>
+                            <div class="col-lg-12 profile-images center">
+                                <span class="btn-file add_img_bg_vehicle no-padding">
+                                    <img src="{{ quiz.Video}}" alt="">
+                                    <input type="file" accept="video/*" (change)="update_video($event);" name="Video">
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12 col-xs-12">
+                                <button class="btn btn-primary btn-rounded pull-right" *ngIf="!quiz._id" (click)="add_quiz()">Add</button>
+                                <button class="btn btn-primary btn-rounded pull-right" *ngIf="quiz._id" (click)="update_quiz()">Update</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<table class="myTable" id="myTable">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Score</th>
+        </tr>
+    </thead>
+    <tbody id="content">
+        <tr *ngFor="let result of results;">
+            <td style="text-align: center">{{result.result_title}}</td>
+            <td style="text-align: center">{{result.result_title}}</td>
+        </tr>    
+        <tr *ngIf="!this.results">
+            <td colspan="12" style="text-align: center"> No Data</td>
+        </tr>
+    </tbody>
+</table>

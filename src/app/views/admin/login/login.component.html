@@ -1,0 +1,57 @@
+<div class="login-container full_height login_right_background">
+    <div style="text-align: center;margin: 2%;">
+        <img src="{{helper.base_url}}logo.png" style="width: 250px;"/>
+    </div>
+    <div class="login-box loginColumns animated fadeInRight">
+        <div class="login-body ibox-content login_right_background">
+            <div class="login-title"> Welcome, Please Login </div>
+            <form  #adminForm="ngForm" (ngSubmit)="login(adminForm.value)" class="form-horizontal">
+                <div class="form-group">
+                    <!-- <label class="login_text_box_label">Admin</label> -->
+                    <div class="col-md-12">
+                        <input type="text" class="form-control login_text_box" [(ngModel)]="Username" name="Username"  required placeholder="Admin" id="e"/>
+                    </div>
+                </div>
+                <div class="form-group" style="margin-bottom: 30px;">
+                    <!-- <label class="login_text_box_label">Password</label> -->
+                    <div class="col-md-12">
+                        <input type="Password" class="form-control login_text_box" [(ngModel)]="Password" required placeholder="Password" name="Password" id="Password" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-6">
+                        <!-- <a href="forgot_psw" class="btn btn-link btn-block">
+                            forgot_Password
+                        </a> -->
+                    </div>
+                    <div class="col-md-6">
+                        <button class="btn btn-info btn-block"> Log In </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="col-md-7 col-xs-12 col-sm-7 full_height login_right_background " style="margin: 10% 25%" >
+    <div class="loginColumns animated fadeInRight" style="max-width: 435px;">
+        <div class="ibox-content login_right_background">
+
+            <form  #adminForm="ngForm" (ngSubmit)="login(adminForm.value)">
+                <div class="form-group">
+                    <label class="login_text_box_label">Admin</label>
+                    <input type="text" class="form-control login_text_box" [(ngModel)]="Username" name="Username"  required />
+
+                </div>
+                <div class="form-group" style="margin-bottom: 30px;">
+                    <label class="login_text_box_label">Password</label>
+                    <input type="Password" class="form-control login_text_box" [(ngModel)]="Password" name="Password" required />
+
+                </div>
+                <div class="col-md-12 col-xs-12 col-sm-12 lable_center" style="margin-top: 20px;">
+                    <button type="submit" class="btn btn-danger m-b login_submit_button" >Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div> -->

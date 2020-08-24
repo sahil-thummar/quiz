@@ -1,0 +1,49 @@
+<div class="page-content-wrap">
+  <div>
+    <div class="col-md-12 serviceresult">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="col-md-4" style="text-align: center;"></div>
+          <div class="col-md-4" style="text-align: center;">
+            <button type="submit" class="btn btn-success btn-block" routerLink="add-edit-quiz">
+            <span class="fa fa-plus"></span>Add Quiz</button>
+          </div>
+          <div class="col-md-4" style="text-align: center;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="col-md-4" *ngFor="let quiz of quizs">
+      <div class="panel panel-default">
+        <div class="panel-body profile">
+          <div class="profile-image service">
+              <img src="profile.png" *ngIf="!quiz.image" 
+                style="border: none;border-radius: 0px;width: 250px;height: 150px;text-align: center;" />
+              
+              <img src="{{quiz.image}}" *ngIf="quiz.image" 
+                style="border: none;border-radius: 0px;width: 250px;height: 150px;text-align: center;" />
+              
+              <!-- <img src="{{quiz.image}}" style="border: none;border-radius: 0px;width: 250px;height: 150px;text-align: center;" /> -->
+          </div>
+          <div class="profile-data"><div class="profile-data-name"></div></div>
+          <div class="profile-controls"></div>
+        </div>
+        <div class="panel-body">
+          <div class="contact-info">
+            <ul class="list-group bord  er-bottom">
+                <li class="list-group-item"><b> Name </b><span class="pull-right">{{quiz.name}}</span></li>
+                <li class="list-group-item"><b> City </b><span class="pull-right">{{quiz.city}}</span></li>
+                <li class="list-group-item"><b> Result </b><span class="pull-right">{{quiz.result}}</span></li>
+                <li class="list-group-item"><b> Stall No </b><span class="pull-right">{{quiz.stallno}}</span></li>
+            </ul>
+            <button type="submit" class="btn btn-primary btn-block"
+              [routerLink]="['add-edit-quiz']" [queryParams]="{_id:quiz._id}" >Edit Quiz</button>
+            <button type="submit" class="btn btn-primary btn-block"
+              (click)="deletequiz(quiz._id)">Delete Quiz</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,49 @@
+table,#result_form {  
+    width:50%;
+    margin: 3% 25%;
+}
+table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+th, td {    padding: 15px;  text-align: center;   }
+th {
+  font-size: 20px;
+  border-color: white;
+  background-color: #059edc;
+  color: white;
+}
+tr{ background-color: #ccdff2}
+tr:nth-child(even) {background-color: #e7f0f9;}
+#content button{
+    height: 34px;
+    font-size: 16px;
+    margin: 0 3px;
+    border-radius: 10px;
+    background-color: #059edc;
+    border: 1px solid #0574a2;
+    color: white;
+}
+#result_form input{
+    margin: 0 2%;
+    padding: 7px;
+    border-radius: 10px;
+    border-color: #059edc;
+    font-size: 20px;
+    color: #059edc;
+}
+#result_form input::placeholder { color: #059edc;text-align: center; }
+#result_form button{
+    border-color: #059edc;
+    padding: 7px;
+    font-size: 20px;
+    color: white;
+    background-color: #059edc;
+    border-radius: 25px;
+}
+.error{
+    border-color: red;
+}
+#result_edit_title{
+    margin: 0 25%;
+}

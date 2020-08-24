@@ -1,0 +1,74 @@
+ul {
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+    width: 100%;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #ccdff2;
+    color: #059edc;
+  }
+  
+  .active {
+    background-color: #059edc;
+  }
+
+.scrollbar
+  {
+      height: 100%;
+      background-color: #222222 !important;
+      overflow-y: auto;
+  }
+
+  .scrollbar::-webkit-scrollbar-track
+  {
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+      background-color: #fff;
+  }
+
+  .scrollbar::-webkit-scrollbar
+  {
+      width: 3px;
+      background-color: #222222;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb
+  {
+      background-color: #000000;
+  }
+
+  [hidden], template{
+      display: none !important;
+  }
+
+
+.profile .profile-image {
+    float: left;
+    width: 100%;
+    margin: 0px 0px 10px;
+    text-align: center;
+}
+
+.profile img{
+    margin: 20px 0;
+    max-width: 125px;
+    max-height: 125px;
+}
+
+.navbar-default{
+    height: 100pc;
+}

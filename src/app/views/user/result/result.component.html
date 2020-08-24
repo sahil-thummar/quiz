@@ -1,0 +1,52 @@
+<!-- <div class="container" style="padding-top: 30px">
+    Title : 
+    <div *ngIf="!addedit_result_title">
+        abc
+        <button (click)="edit_result_title()">Edit result title</button>
+    </div>
+    <div *ngIf="addedit_result_title">
+        <input type ="text" name="result_title" id="result_title">
+        <button (click)="add_result_title()">Add result_title</button>
+    </div>
+</div>
+<table>
+    <thead>
+        <tr>
+            <th> title </th>
+            <th> Edit </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <input type ="text" name="result_title" id="result_title">  
+        </tr>
+    </tbody>
+</table> -->
+<form id="result_form" #result_form="ngForm">
+    <input  name="name" class="col-sm-3" #result_title placeholder="Enter name" required>
+    <button type="submit"  (click)="add_result_title(result_title.value)">Add</button>
+</form>
+<table class="myTable" id="myTable">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Edit</th>
+        </tr>
+    </thead>
+    <tbody id="content">
+        <tr *ngFor="let result of results;">
+            <td *ngIf="result._id != addedit_result_title" style="text-align: center">{{result.result_title}}</td>
+            <td *ngIf="result._id != addedit_result_title" style="text-align: center">
+              <button (click)="edit_result(result._id)">edit</button></td>
+            <td *ngIf="result._id == addedit_result_title" style="text-align: center">                
+                    <input id="result_edit_title" class="col-sm-6" required
+                    (change)="change_title($event)" value="{{result.result_title}}">
+            </td>
+            <td *ngIf="result._id == addedit_result_title">
+            <button type="submit" (click)="update_result_title(result._id)">Update</button></td>     
+        </tr>    
+        <tr *ngIf="!this.results">
+            <td colspan="12" style="text-align: center"> No Data</td>
+        </tr>
+    </tbody>
+</table>

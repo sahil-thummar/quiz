@@ -1,0 +1,64 @@
+label{
+    width: 30%;
+}
+#serviceform{
+    display: flex;
+    background-color: #fff;
+    padding: 1% 10%;
+}
+#serviceform input{
+    width: 70%
+}
+#serviceform button{
+    width: 100px;
+    color: white;
+    margin: 0 50%;
+    font-size: 25px;
+    height: 80px;
+    background-color: #059edc;
+    border-color: #059edc;
+    border-radius: 15%;
+}
+.subservice{
+    color: white;
+    height: 150px;
+    background-color: #32404d;
+}
+.subservice img{
+    margin: 4% 30%;
+}
+.catname{
+    margin: 0 43%;
+}
+.service{
+    background-color: #fff;
+    margin: 4%;
+    text-align: center;
+    padding: 0px
+}
+.service button{
+    margin: 4% 37%;
+    border-radius: 11px;
+    height: 30px;
+    border-color: #32404d;
+    width: 75px;
+    color: white;
+    background-color: #32404d;
+}
+#updatevehcatform input{
+    color: black;
+}
+.updateimage{
+    display: flex;
+    padding: 0px 20px;
+    height: 23px;
+}
+#uimage{
+    width: 32%;
+}
+#my_file {
+    display: none;
+}
+.contact-info button{
+    width: 80%;margin: 5px auto;
+} 

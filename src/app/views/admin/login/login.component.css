@@ -1,0 +1,27 @@
+.login-container {
+    float: left;
+    width: 100%;
+    height: 50pc;
+    background: #33414e;
+    position: fixed;
+}
+.login-container .login-box {
+    width: 400px;
+    margin: 0px auto;
+    padding-top: 50px;
+}
+.login-container .login-box .login-body {
+    width: 100%;
+    float: left;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+.login-container .login-box .login-body .login-title {
+    color: rgb(173, 96, 96);
+    font-size: 19px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
